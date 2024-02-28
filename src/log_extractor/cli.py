@@ -24,8 +24,12 @@ def count(path, topk):
 
 
 @cli.command()
-@click.argument('path_a', default=Path('data/Apache.part-1-of-2.log'), type=ExistsFileType)
-@click.argument('path_b', default=Path('data/Apache.part-2-of-2.log'), type=ExistsFileType)
+@click.argument(
+    'path_a', default=Path('data/Apache.part-1-of-2.log'), type=ExistsFileType
+)
+@click.argument(
+    'path_b', default=Path('data/Apache.part-2-of-2.log'), type=ExistsFileType
+)
 @click.option('--topk', default=100, type=int)
 def diff(path_a, path_b, topk):
     counters = [
@@ -38,7 +42,7 @@ def diff(path_a, path_b, topk):
             if token in merged_counter:
                 merged_counter[token][i] = count
             else:
-                counts = [ 0, 0 ]
+                counts = [0, 0]
                 counts[i] = count
                 merged_counter[token] = counts
     merged_items = sorted(
@@ -56,4 +60,3 @@ def get_token_counter_from_path(path):
             for match in TOKEN_PATTERN.finditer(row):
                 token_counter[match.group(0)] += 1
     return token_counter
-

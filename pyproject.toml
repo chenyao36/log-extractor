@@ -1,7 +1,6 @@
 [project]
 name = "log-extractor"
 version = "0.1.0"
-description = "Add your description here"
 authors = [
     { name = "chenyao36", email = "chen.yao.36@outlook.com" }
 ]
@@ -27,3 +26,7 @@ allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/log_extractor"]
+
+[tool.ruff.format]
+quote-style = "single"
+
