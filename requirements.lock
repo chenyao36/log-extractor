@@ -9,3 +9,4 @@
 
 -e file:.
 click==8.1.7
+    # via log-extractor

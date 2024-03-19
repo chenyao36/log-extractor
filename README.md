@@ -1,6 +1,7 @@
 # log-extractor
 
-Background: https://docs.qq.com/doc/DQWlTalBOT3FKaG9T
+- Background: https://docs.qq.com/doc/DQWlTalBOT3FKaG9T
+- A better prototype: [CalvinNeo/LogExtractor](https://github.com/CalvinNeo/LogExtractor)
 
 1. Get Apache log file.
     - `cd data` and `make`.
